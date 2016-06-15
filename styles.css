@@ -1,0 +1,99 @@
+  body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background-color: #ececec; }
+  body .flex-div {
+    width: 30em;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 1px 1px 5px grey; }
+    body .flex-div form {
+      width: 90%;
+      border-bottom: 1px solid grey; }
+      body .flex-div form input {
+        width: 90%;
+        border: none;
+        font-size: 25px;
+        padding: 3%;
+        color: grey; }
+        body .flex-div form input::-webkit-input-placeholder {
+          color: silver;
+          font-style: italic; }
+        body .flex-div form input:focus {
+          outline: none; }
+    body .flex-div .items {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      body .flex-div .items .item {
+        width: 85%;
+        border-bottom: 1px dashed grey;
+        color: grey;
+        padding: 3%;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between; }
+        body .flex-div .items .item .check {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          border: 1px solid #cdcdcd;
+          border-radius: 50%;
+          -webkit-transition: all .5s ease; }
+        body .flex-div .items .item .check-click {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          border: 1px solid green;
+          border-radius: 50%;
+          background-color: #92fb92; }
+        body .flex-div .items .item .strike {
+          text-decoration: line-through;
+          color: #cdcdcd; }
+        body .flex-div .items .item .delete {
+          color: red;
+          font-weight: bold;
+          visibility: hidden;
+          transform: rotate(45deg); }
+        body .flex-div .items .item:hover .delete {
+          visibility: visible;
+          cursor: pointer; }
+        body .flex-div .items .item .highlight {
+          color: black; }
+    body .flex-div .stats {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      color: grey;
+      font-size: 15px; }
+      body .flex-div .stats #countDown {
+        padding: 2% 0 2% 0; }
+      body .flex-div .stats .filters {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0 2% 0;
+        align-self: center;
+        width: 30%; }
+        body .flex-div .stats .filters a {
+          padding: 0 6% 0 6%;
+          color: grey;
+          text-decoration: none; }
+        body .flex-div .stats .filters a:focus {
+          border: 1px solid red;
+          border-radius: 25%; }
+      body .flex-div .stats #clear {
+        text-align: right;
+        padding: 2% 0 2% 0; }
+      body .flex-div .stats #clear:hover {
+        cursor: pointer; }
+
+@media (max-width: 455px) {
+  .stats {
+    font-size: 10px;
+    padding: 2%; } }
+

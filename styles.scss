@@ -1,0 +1,139 @@
+$font-stack: Arial, sans-serif;
+$font-color: grey;
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: $font-stack;
+  background-color: #ececec;
+
+  .flex-div {
+    width: 30em;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 1px 1px 5px grey;
+
+    form {
+      width: 90%;
+      border-bottom: 1px solid grey;
+
+      input {
+        width: 90%;
+        border: none;
+        font-size: 25px;
+        padding: 3%;
+        color: $font-color;
+
+        &::-webkit-input-placeholder {
+          color: lighten($font-color, 25%);
+          font-style: italic;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .items {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .item {
+        width: 85%;
+        border-bottom: 1px dashed grey;
+        color: grey;
+        padding: 3%;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+
+        .check {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          border: 1px solid lighten($font-color, 30%);
+          border-radius: 50%;
+          -webkit-transition: all .5s ease;
+        }
+        .check-click{
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          border: 1px solid green;
+          border-radius: 50%;
+          background-color: #92fb92;
+        }
+        .strike {
+          text-decoration: line-through;
+          color: lighten($font-color, 30%);
+        }
+
+        .delete {
+          color: red;
+          font-weight: bold;
+          visibility: hidden;
+          transform: rotate(45deg)
+        }
+
+        &:hover .delete{
+          visibility: visible;
+          cursor: pointer;
+        }
+
+        .highlight {
+          color: black;
+        }
+      }
+    }
+
+    .stats {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      color: $font-color;
+      font-size: 15px;
+
+      #countDown {
+      padding: 2% 0 2% 0;
+      }
+
+      .filters {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0 2% 0;
+        align-self: center;
+        width: 30%;
+        a {
+          padding: 0 6% 0 6%;
+          color: $font-color;
+          text-decoration: none;
+        }
+        a:focus {
+          border: 1px solid red;
+          border-radius: 25%;
+        }
+      }
+
+      #clear {
+        text-align: right;
+        padding: 2% 0 2% 0;
+      }
+      #clear:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 455px) {
+  .stats {
+    font-size: 10px;
+    padding: 2%;
+  }
+}
